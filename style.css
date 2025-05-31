@@ -1,34 +1,95 @@
+html {
+  height: 100%;
+
+}
+
 body {
-  background-color: hsl(89, 43%, 51%);
+  background-color: rgb(238, 205, 162);
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
 .Calculator-body {
   border: 1px solid black;
-  padding: 5%;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+.display-window {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  padding: 2%;
+}
+
+.display {
+  background-color: rgb(255, 165, 165);
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  text-align: right;
 }
 
 .keyboard {
-  border: 1px solid green;
-  padding: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+}
+.number-keypad {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0%;
 }
 
-.key {
-  position: relative;
-  border: 3px solid rgb(47, 255, 0);
-  width: 100px;
+.row {
   display: flex;
   flex-direction: row;
+  position: inherit;
+  width: 25%;
+}
+
+.item {
+  border: 2px solid black;
+  width: 30%;
+  height: auto;
+  background-color: aqua;
+  height: 25%;
+  margin: 0%;
   align-items: center;
   text-align: center;
 }
 
-.item {
-  border: 1px solid rgb(253, 144, 1);
-  width: 10px;
+.ac {
+  position: inherit;
+  margin: 0%;
+  display: block;
+  justify-content: center;
+  width: 100%;
+  padding: 0%;
 }
 
-p {
-  border: 2px solid red;
+.equal {
+  background-color: orange;
+}
+
+.sym {
+  background-color: pink;
+}
+
+.ac-button {
+  border: 2px solid black;
+  height: 100%;
+  background-color: bisque;
+  width: 100%;
+  text-align: center;
+  margin: 0%;
 }
