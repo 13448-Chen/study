@@ -1,4 +1,25 @@
 body {
-  color: red;
-  border: px0;
+  background-color: hsl(89, 43%, 51%);
+}
+
+.Calculator-body {
+  border: 1px solid black;
+  padding: 5%;
+}
+
+.keyboard {
+  border: 1px solid green;
+  padding: 5%;
+}
+
+.row {
+  border: 1px solid blue;
+  width: 100%;
+  display: flexbox;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item {
+  border: 2px solid rgb(253, 144, 1);
 }
