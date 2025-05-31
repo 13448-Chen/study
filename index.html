@@ -11,45 +11,92 @@
     crossorigin="anonymous"
   />
   <style></style>
-  <script src=""></script>
   <body>
     <div class="Calculator-body">
       <div class="display-window">
-        <p class="display">0</p>
+        <input class="display" id="display-answer" readonly placeholder="0" />
       </div>
       <div class="keyboard">
         <div class="ac row">
-                  <div class="number-keypad">
-          <p class="ac-button">AC</p>
-        </div>
+          <div class="number-keypad">
+            <p class="ac-button" onclick="clearDisplay()">AC</p>
+          </div>
         </div>
         <div class="number-keypad">
           <div class="row">
-            <p class="item num seven">7</p>
-            <p class="item num four">4</p>
-            <p class="item num one">1</p>
-            <p class="item num zero">0</p>
+            <button class="item num seven" onclick="appendToDisplay('7')">
+              7
+            </button>
+            <button class="item num four" onclick="appendToDisplay('4')">
+              4
+            </button>
+            <button class="item num one" onclick="appendToDisplay('1')">
+              1
+            </button>
+            <button class="item num zero" onclick="appendToDisplay('0')">
+              0
+            </button>
           </div>
           <div class="row">
-            <p class="item num eight">8</p>
-            <p class="item num five">5</p>
-            <p class="item num six">2</p>
-            <p class="item sym dot">.</p>
+            <button class="item num eight" onclick="appendToDisplay('8')">
+              8
+            </button>
+            <button class="item num five" onclick="appendToDisplay('5')">
+              5
+            </button>
+            <button class="item num six" onclick="appendToDisplay('2')">
+              2
+            </button>
+            <button class="item sym dot" onclick="appendToDisplay('.')">
+              .
+            </button>
           </div>
-          <div class="row3 row"> 
-            <p class="item num nine">9</p>
-            <p class="item num six">6</p>
-            <p class="item num three">3</p>
-            <p class="item sym equal">=</p>
+          <div class="row3 row">
+            <button class="item num nine" onclick="appendToDisplay('9')">
+              9
+            </button>
+            <button class="item num six" onclick="appendToDisplay('6')">
+              6
+            </button>
+            <button class="item num three" onclick="appendToDisplay('3')">
+              3
+            </button>
+            <button class="item sym equal" onclick="calculate()">=</button>
           </div>
           <div class="row4 row">
-            <p class="item sym plus">+</p>
-            <p class="item num minus">-</p>
-            <p class="item sym multiply">x</p>
-            <p class="item sym divide">/</p>
+            <button class="item sym plus" onclick="appendToDisplay('+')">
+              +
+            </button>
+            <button class="item num minus" onclick="appendToDisplay('-')">
+              -
+            </button>
+            <button class="item sym multiply" onclick="appendToDisplay('*')">
+              x
+            </button>
+            <button class="item sym divide" onclick="appendToDisplay('/')">
+              /
+            </button>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="study\Algorithm.js"></script>
+
+    <script>
+      const display = document.getElementById("display-answer");
+
+      function appendToDisplay(input) {
+        display.value += input;
+      }
+
+      function clearDisplay() {
+        display.value = "";
+      }
+
+      function calculate() {
+        display.value = eval(display.value);
+      }
+    </script>
   </body>
 </html>
