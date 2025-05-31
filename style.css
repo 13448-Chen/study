@@ -5,6 +5,8 @@ body {
 .Calculator-body {
   border: 1px solid black;
   padding: 5%;
+  display: flex;
+  flex-direction: column;
 }
 
 .keyboard {
@@ -12,14 +14,21 @@ body {
   padding: 5%;
 }
 
-.row {
-  border: 1px solid blue;
-  width: 100%;
-  display: flexbox;
+.key {
+  position: relative;
+  border: 3px solid rgb(47, 255, 0);
+  width: 100px;
+  display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: center;
 }
 
 .item {
-  border: 2px solid rgb(253, 144, 1);
+  border: 1px solid rgb(253, 144, 1);
+  width: 10px;
+}
+
+p {
+  border: 2px solid red;
 }
