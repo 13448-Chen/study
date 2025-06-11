@@ -1,95 +1,114 @@
 html {
   height: 100%;
-
 }
 
 body {
-  background-color: rgb(238, 205, 162);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Calculator-body {
-  border: 1px solid black;
+  width: 39%;
+  height: 60%;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-}
-.display-window {
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  justify-content: space-around;
-  padding: 2%;
-}
-
-.display {
-  background-color: rgb(255, 165, 165);
-  width: 100%;
-  height: 100%;
-  border: 2px solid black;
-  text-align: right;
-}
-
-.keyboard {
-  display: flex;
   justify-content: space-evenly;
-  flex-direction: column;
+  padding: 0.2%;
   align-items: center;
-  padding: 2%;
-}
-.number-keypad {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0%;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  position: inherit;
-  width: 25%;
+  border: 3px solid black;
 }
 
 .item {
-  border: 2px solid black;
-  width: 30%;
-  height: auto;
-  background-color: aqua;
-  height: 25%;
-  margin: 0%;
-  align-items: center;
-  text-align: center;
+  height: 16%;
 }
 
-.ac {
-  position: inherit;
-  margin: 0%;
-  display: block;
-  justify-content: center;
+.key {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
   width: 100%;
-  padding: 0%;
+  justify-content: space-evenly;
+  margin: 0.1% 0%;
 }
 
-.equal {
-  background-color: orange;
+.display-window {
+  background-color: rgb(211, 122, 6);
+  border-radius: 5px;
+  border: 3px solid black;
+  width: 97%;
+  padding: 0.2%;
 }
 
 .sym {
-  background-color: pink;
+  background: rgb(255, 183, 0);
+  width: 100%;
+  height: 20%;
+  margin: 0.1% 0%;
+  border-radius: 5px;
 }
 
-.ac-button {
-  border: 2px solid black;
-  height: 100%;
-  background-color: bisque;
-  width: 100%;
+.key2 {
+  width: 25%;
+  border-radius: 5px;
+  height: 99%;
+}
+
+.num {
+  background-color: gray;
   text-align: center;
-  margin: 0%;
+  width: 32%;
+}
+
+.zero,
+.ac {
+  width: 65%;
+}
+
+.equal {
+  height: 39%;
+  background-color: rgb(73, 249, 76);
+}
+
+.ac {
+  background-color: rgb(243, 73, 73);
+}
+
+.keyboard {
+  height: 83%;
+  width: 99%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.rightkeyboard {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0.2%;
+}
+.leftkeyboard {
+  height: 100%;
+  width: 75%;
+  padding: 0.2%;
+}
+.divide {
+  width: 32%;
+}
+
+button {
+  border: 3px solid black;
+}
+
+#show-answer {
+  background-color: rgb(211, 122, 6);
+  border: 0px;
+  width: 100%;
+  text-align: right;
 }

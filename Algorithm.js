@@ -1,13 +1,21 @@
-const display = document.getElementById("display-answer");
+const display = document.getElementById("show-answer");
 
 function appendToDisplay(input) {
-  display.value += input;
+  if (display.value === "0") {
+    display.value = input;
+  } else {
+    display.value += input;
+  }
 }
 
 function clearDisplay() {
-  display.value = "";
+  display.value = "0";
 }
 
 function calculate() {
-  display.value = eval(display.value);
+  try {
+    display.value = eval(display.value);
+  } catch (error) {
+    display.value = "Error";
+  }
 }
