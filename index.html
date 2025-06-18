@@ -8,6 +8,7 @@
     <div class="Calculator-body">
       <div class="key display-window">
         <input id="show-answer" readonly value="0" />
+        <input id="calculateInput-answer" readonly value="claculateInput" />
       </div>
       <div class="keyboard">
         <div class="leftkeyboard">
@@ -18,7 +19,7 @@
             <button
               type="button"
               class="key2 sym divide"
-              onclick="appendToDisplay('/')"
+              onclick="appendToDisplay('÷')"
             >
               ÷
             </button>
@@ -113,7 +114,7 @@
           <button
             type="button"
             class="sym multiply"
-            onclick="appendToDisplay('*')"
+            onclick="appendToDisplay('x')"
           >
             x
           </button>
