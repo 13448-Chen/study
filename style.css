@@ -19,7 +19,6 @@ body {
   justify-content: space-evenly;
   padding: 0.2%;
   align-items: center;
-  border: 3px solid black;
 }
 
 .item {
@@ -38,7 +37,7 @@ body {
 .display-window {
   background-color: rgb(211, 122, 6);
   border-radius: 5px;
-  border: 3px solid black;
+
   width: 97%;
   padding: 0.2%;
 }
@@ -106,7 +105,7 @@ body {
 }
 
 button {
-  border: 3px solid black;
+  border-style: none;
   font-size: 150%;
 }
 
@@ -116,4 +115,8 @@ button {
   width: 100%;
   text-align: right;
   font-size: 150%;
+}
+
+#calculateInput-answer {
+  width: 1px;
 }
