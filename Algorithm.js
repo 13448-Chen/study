@@ -1,5 +1,9 @@
 const display = document.getElementById("show-answer");
+const calStatus1 = document.getElementById("calStatus1");
+const displayHolder1 = document.getElementById("displayHolder1");
+const valueHolder1 = document.getElementById("valueHolder1");
 const calculatinputanswer = document.getElementById("calculateInput-answer");
+
 var calculateintput = "";
 var calStatus = 0;
 var displayHolder = "";
@@ -11,45 +15,8 @@ function appendToDisplay(input) {
   //this part will make sure the calculation will keep on going if we click operators after we got the answer.
   //this part is after calculat
   if (calStatus === 1) {
-    if (
-      input == "+" ||
-      input == "-" ||
-      input == "x" ||
-      input == "÷" ||
-      input == "."
-    ) {
-      displayHolder = valueHolder;
-      if (display.value === "0") {
-        displayHolder += input;
-        display.value = displayHolder + "im1+" + calStatus;
-        if (input == "x") {
-          input = "*";
-          calculateintput += input;
-          calculatinputanswer.value = calculateintput;
-        } else if (input == "÷") {
-          input = "/";
-          calculateintput += input;
-          calculatinputanswer.value = calculateintput;
-        } else {
-          calculateintput += input;
-          calculatinputanswer.value = calculateintput;
-        }
-      } else {
-        displayHolder += input;
-        display.value = displayHolder + "im2+" + calStatus;
-        if (input == "x") {
-          input = "*";
-          calculateintput += input;
-          calculatinputanswer.value = calculateintput;
-        } else if (input == "÷") {
-          input = "/";
-          calculateintput += input;
-          calculatinputanswer.value = calculateintput;
-        } else {
-          calculateintput += input;
-          calculatinputanswer.value = calculateintput;
-        }
-      }
+    display.value = displayHolder + "im1+" + "  calstatus is" + calStatus;
+    if (input === "x" || input === "÷" || input == "+" || input == "-") {
     }
   } else if (calStatus === 0) {
     //this part is before calculate
@@ -110,16 +77,26 @@ function calculate() {
   ) {
     display.value = "0";
     calculateintput.value = "0";
+    calStatus = 1;
+    //nav
+    calStatus1.value = calStatus;
+    displayHolder1.value = displayHolder;
+    valueHolder1.value = valueHolder;
+
     calculatinputanswer.value = "calStatus = " + calStatus; //temp
   } else {
     var valueHolder = eval(calculateintput);
+    calStatus = 1;
     display.value = valueHolder;
     calculatinputanswer.value = eval(calculateintput);
     //calculateintput = "";
     calculateintput = valueHolder;
     calculatinputanswer.value =
       calculateintput + "+ calculateintput 2" + "calStatus = " + calStatus;
-    calStatus = 1;
     displayHolder = valueHolder;
+    //nav
+    calStatus1.value = calStatus;
+    displayHolder1.value = displayHolder;
+    valueHolder1.value = valueHolder;
   }
 }
